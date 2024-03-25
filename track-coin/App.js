@@ -1,16 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
-import TradeItem from './src/components/tradeItem';
+import { StyleSheet, Text, View } from 'react-native'
+import { StatusBar } from 'expo-status-bar'
+import TradeList from './src/components/TradeList.jsx'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Track Coin</Text>
-      <StatusBar style="auto" />
-
-      <TradeItem />
+      <View style={styles.container}>
+        <StatusBar style="auto" />
+      </View>
+      <View style={styles.container}>
+        <Text>Track Coin</Text>
+        <TradeList />
+      </View>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -20,4 +23,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})
